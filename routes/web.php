@@ -15,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [TodoController::class, 'index']);
-Route::delete('todo/{$id}', [TodoController::class, 'destroy']);
-// Route::delete('delete-student/{id}', [StudentController::class, 'destroy']);
+Route::delete('todo/{id}', [TodoController::class, 'destroy']);
 
