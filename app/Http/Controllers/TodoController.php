@@ -17,7 +17,7 @@ class TodoController extends Controller
     {
         //
         $todos = Todo::all();
-        return view('welcome', ['todos' => $todos]);
+        return view('main', ['todos' => $todos]);
     }
 
     /**
@@ -86,7 +86,7 @@ class TodoController extends Controller
         //
      $todo = Todo::find($id);
      $todo->delete();
-     return redirect()->back()->with('status','Student Deleted Successfully');
+     return redirect()->back()->with('status','Todo Deleted Successfully');
     // return redirect('/');
     }
 }
