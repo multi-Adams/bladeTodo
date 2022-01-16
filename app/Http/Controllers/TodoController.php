@@ -38,7 +38,12 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+        ]);
+
+         Todo::create($request->all());
+        return redirect()->back()->with('status','Todo Added Successfully');
     }
 
     /**
@@ -87,6 +92,5 @@ class TodoController extends Controller
      $todo = Todo::find($id);
      $todo->delete();
      return redirect()->back()->with('status','Todo Deleted Successfully');
-    // return redirect('/');
     }
 }

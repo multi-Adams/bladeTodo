@@ -21,11 +21,7 @@
             </div>
         @endif
         <div class="justify-self-end">
-            <form action="todo/{{ $todo->id }}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button class="p-1 bg-red-500" type="submit">Delete</button>
-            </form>
+          <x-forms.delete-button :id="$todo->id"/>
         </div>
     </div>
 </div>

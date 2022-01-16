@@ -15,8 +15,9 @@
 </head>
 
 <body class="antialiased">
-    <div class="mx-40 my-20  py-4">
+    <div class="mx-40 my-20  py-4">        
         <h1 class="text-4xl mb-5 font-mono text-center">TodoList</h1>
+        <x-forms.add-todo-form/>
         @foreach ($todos as $todo)
             <x-todo.index :todo="$todo" />
         @endforeach
